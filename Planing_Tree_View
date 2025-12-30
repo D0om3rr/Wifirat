@@ -25,19 +25,13 @@ wifipentest-toolkit/
 │   │   ├── p0841.py        # P0841 attack
 │   │   └── wep_cracker.py  # WEP cracking (aircrack-ng)
 │   │
-│   ├── wpa/                 # WPA/WPA2-specific attacks
-│   │   ├── __init__.py
-│   │   ├── handshake.py    # WPA handshake capture
-│   │   ├── pmkid.py        # PMKID attack
-│   │   ├── wps.py          # WPS attacks (Pixie Dust, Reaver)
-│   │   └── wpa_cracker.py  # WPA cracking (hashcat, john)
-│   │
-│   └── reconnaissance/      # Reconnaissance tools
+│   └── wpa/                 # WPA/WPA2-specific attacks
 │       ├── __init__.py
-│       ├── wardriving.py   # GPS-based wardriving
-│       ├── kismet.py       # Kismet integration
-│       └── recon.py        # General reconnaissance
-│
+│       ├── handshake.py    # WPA handshake capture
+│       ├── pmkid.py        # PMKID attack
+│       ├── wps.py          # WPS attacks (Pixie Dust, Reaver)
+│       └── wpa_cracker.py  # WPA cracking (hashcat, john)
+│   
 ├── post_exploitation/
 │   ├── __init__.py
 │   ├── ettercap.py         # ARP poisoning, MITM
@@ -55,35 +49,17 @@ wifipentest-toolkit/
 │   ├── john_wrapper.py     # John the Ripper integration
 │   └── rainbow_table.py    # Rainbow table utilities
 │
-├── utils/
-│   ├── __init__.py
-│   ├── helpers.py          # Common utilities
-│   ├── validator.py        # Input validation
-│   ├── output_formatter.py # Pretty output/display
-│   ├── network_utils.py    # Network utilities
-│   └── encryption_utils.py # Encryption/decryption helpers
-│
 ├── config/
 │   ├── __init__.py
 │   ├── settings.py         # Configuration constants
 │   ├── colors.py           # ANSI color codes
 │   └── presets.py          # Attack presets/configs
 │
-├── tests/
-│   ├── test_attacks/
-│   ├── test_post_exploit/
-│   └── test_utils.py
-│
 ├── data/
 │   ├── wordlists/
 │   ├── captures/
 │   ├── hashes/
 │   └── logs/
-│
-├── reports/
-│   ├── templates/
-│   └── generator.py        # Report generation (PDF/HTML)
-│
 ├── requirements.txt
 ├── setup.py
 ├── main.py                 # Main CLI interface
