@@ -4,9 +4,7 @@ wifipentest-toolkit/
 │
 ├── core/
 │   ├── __init__.py
-│   ├── base_tool.py          # Base class for all tools
-│   ├── interface_manager.py  # Handle network interfaces
-│   └── logger.py            # Custom logging system
+│   └──  interface_manager.py  # Handle network interfaces
 │
 ├── attacks/
 │   ├── __init__.py
