@@ -1,6 +1,6 @@
 <p align="center"> <img src="https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python" alt="Python"> <img src="https://img.shields.io/badge/First%20Project-Yes!-green?style=for-the-badge" alt="First Project"> <img src="https://img.shields.io/badge/Status-Under%20Development-orange?style=for-the-badge" alt="Status"> </p>
 
-
+``
  ▄█     █▄   ▄█     ▄████████  ▄█     ▄████████    ▄████████     ███     
 ███     ███ ███    ███    ███ ███    ███    ███   ███    ███ ▀█████████▄ 
 ███     ███ ███▌   ███    █▀  ███▌   ███    ███   ███    ███    ▀███▀▀██ 
@@ -10,7 +10,7 @@
 ███ ▄█▄ ███ ███    ███        ███    ███    ███   ███    ███     ███     
  ▀███▀███▀  █▀     ███        █▀     ███    ███   ███    █▀     ▄████▀   
                                      ███    ███                          
-
+``
 
 
 
