@@ -10,7 +10,7 @@ import re
 
 """ 
 
-To call the interface from another part of the code, get_current_interface() function from NetworkInterfaceManager needs to be called, this in't as simply as it could be but its functional
+To call the interface from another part of the code, get_current_interface() method from NetworkInterfaceManager needs to be called, this in't as simply as it could be but its functional
 and allows global acces to the variable and has a lot of error handiling functions. Also the state stays the same througth the code. As this is a ""bigger"" proyect
 it might be better to do it this way (i think).
 
@@ -119,6 +119,7 @@ class NetworkInterfaceManager:
         
         return interface_is_up(self.selected_interface)
 
+    @property
     def get_current_interface(self):
         #Returns the selected interface as the value
         return self.selected_interface
@@ -175,11 +176,10 @@ class NetworkInterfaceManager:
             print("[!] airmon-ng Not installed!")
             print("[-] Error: ")
     
-    def cleanup(self):
+    def cleanup(self, interface):
 
         #Takes the wireless interface back to normal
-
         subprocess.run(
-            ["airmon-ng", "stop", self.selected_interface]
+            ["airmon-ng", "stop", interface]
         )
         subprocess.run(["systemctl", "restart", "NetworkManager"])
