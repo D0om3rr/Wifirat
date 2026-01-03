@@ -9,6 +9,8 @@ Also to get a deeper understanding of penetration testing tools, network securit
 
 ⚠️ IMPORTANT: This tool is for _**EDUCATIONAL PURPOSES ONLY**_. **Only use on networks you own or have explicit permission to test.**
 
+## HELP 
+If you are willing to **help developing** this program, or just **giving advice and improving the code** it would be really helpfull!! So feel free to do it.
 
 ## TREE STRUCTURE
 I know it might be too much but this is what i would like to have in my proyect:
