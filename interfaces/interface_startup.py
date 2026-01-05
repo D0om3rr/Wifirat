@@ -2,11 +2,11 @@ import subprocess
 import signal
 import sys
 from interfaces import interface_manager
-from recon.scan import scanner
 from interfaces.interface_manager import NetworkInterfaceManager
 
 
 def interface_startup():
+    
     def bring_interface_up(interface):
         # Bring network interface up
         try:
@@ -67,26 +67,10 @@ def interface_startup():
         print("[-] Failed to enable monitor mode")
         sys.exit(1)
 
-    try:
-        # Get the current interface using the property
-        current_interface = manager.get_current_interface
-        
-        if not current_interface:
-            print("[-] ERROR: current_interface is None!")
-            print(f"    Selected interface: {manager.selected_interface}")
-            sys.exit(1)
-
-        print(f"[+] Starting scan on interface: {current_interface}")
-        scanner(current_interface)
-
-    except Exception as e:
-        print(f"[-] An error occurred: {e}")
-        raise
+    # Get the current interface using the property
+    current_interface = manager.get_current_interface
     
-    finally:
-        # Always cleanup when exiting, regardless of how
-        current_interface = manager.get_current_interface
-        if current_interface:
-            print(f"\n[+] Cleaning up interface: {current_interface}")
-            manager.cleanup(current_interface)
-            print("[+] Cleanup completed, network connection restored")
+    if not current_interface:
+        print("[-] ERROR: current_interface is None!")
+        print(f"    Selected interface: {manager.selected_interface}")
+        sys.exit(1)
