@@ -1,8 +1,7 @@
 import os
 import sys
 from interfaces.interface_startup import interface_startup
-from recon.scan import scanner
-from interfaces.interface_manager import NetworkInterfaceManager 
+from menu import MenuStarter
 
 def check_root():
     return os.getuid() == 0
@@ -20,7 +19,9 @@ def main():
     
     interface_startup()
 
-    if interface_startup:
-        pass
+    menu = MenuStarter()
+    menu.objetive_selector()
+    menu.print_menu()
+
 if __name__ == '__main__':
     main()
